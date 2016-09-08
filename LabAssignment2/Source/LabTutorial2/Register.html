@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Page</title>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+<body background="img/Registration.jpg">
+<div ng-controller="PersonController" data-ng-init="Page='Register Page'">
+    <br/>
+
+    <p style="margin-left: 300px; margin-top: 100px;">First Name:&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; <input type="text" name="firstName" id="firstName" data-ng-model="person.fname"/><br/><br/>
+        Last Name:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" name="lastName" id="lastName" data-ng-model="person.lname"/><br/><br/>
+        Mobile Number:&nbsp; &nbsp; <input type="text" name="lastName" id="MobileNumber" data-ng-model="person.mobilenum"/><br/><br/>
+        Address:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <input type="text" name="lastName" id="" data-ng-model="person.address"/>
+    <br/><br/><br/>
+
+    <button id="myBtn" style="height:30px;width:80px; margin-left:150px">Register</button></p>
+    <button onclick="location.href='login.html'" style="height:30px;width:80px; margin-left:450px">Back</button></p>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">×</span>
+                <center><p><h2>Registered succesfully</h2></p></center>
+</div>
+
+</div>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+
+</script>
+</div>
+</body>
+</html>

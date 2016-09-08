@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="" data-ng-app="myApp">
+<head>
+    <meta t="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" type="application/javascript"></script>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+
+<body background="img/login.jpg">
+<div ng-controller="PersonController" data-ng-init="course='Login Page'">
+    <h1><p style="color: #aaaaaa; margin-left: 200px;"> Welcome to <span data-ng-bind="course"> </span></p></h1>
+<br/>
+    <p style="color: white; margin-left: 150px; margin-top: 100px;">User Name: &nbsp;<input type="text" name="UserName" id="UserName" data-ng-model="person.fname"/><br/><br/>
+        Password:   &nbsp;&nbsp;&nbsp;  <input type="text" name="Password" id="Password" data-ng-model="person.lname"/><br/><br/><br/><br/>
+
+    <button style="height:30px;width:80px" onclick="location.href='home.html'">Login</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button style="height:30px;width:80px" onclick="location.href='Register.html'">Register</button></p>
+
+
+</div>
+</body>
+</html>

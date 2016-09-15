@@ -1,0 +1,77 @@
+<div id="mySignin" onclick="login()"><img src="google_image_here.png" alt="google" style="cursor:pointer;height: 60px;width: 309px;"/></div>
+
+<script type="text/javascript">
+    function login()
+    {
+        var myParams = {
+            'clientid' : '1021011055231-oahljeitvg6ehquq5lv095s976ot8kva.apps.googleusercontent.com',
+            'cookiepolicy' : 'single_host_origin',
+            'callback' : 'loginCallback',
+            'approvalprompt':'force',
+            'scope' : 'https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/plus.profile.emails.read'
+        };
+        gapi.auth.signIn(myParams);
+    }
+
+    function loginCallback(result)
+    {
+        if(result['status']['signed_in'])
+        {
+            var request = gapi.client.plus.people.get(
+                    {
+                        'userId': 'me'
+                    });
+            request.execute(function (resp)
+            {
+                /* console.log(resp);
+                 console.log(resp['id']); */
+                var email = '';
+                if(resp['emails'])
+                {
+                    for(i = 0; i < resp['emails'].length; i++)
+                    {
+                        if(resp['emails'][i]['type'] == 'account')
+                        {
+                            email = resp['emails'][i]['value'];//here is required email id
+                        }
+                    }
+                }
+                var usersname = resp['displayName'];//required name
+            });
+        }
+    }
+    function onLoadCallback()
+    {
+        gapi.client.setApiKey('AIzaSyBAf65HJjSknHuCPYMRgj9Mk7PgtEflKb8');
+        gapi.client.load('plus', 'v1',function(){});
+    }
+
+</script>
+
+<script type="text/javascript">
+    (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/client.js?onload=onLoadCallback';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+</script>
+<!--<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="1021011055231-oahljeitvg6ehquq5lv095s976ot8kva.apps.googleusercontent.com">
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+<a href="#" onclick="signOut();">Sign out</a>
+<script>
+    function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail());
+    }
+    function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+            console.log('User signed out.');
+        });
+    }
+</script>-->

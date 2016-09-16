@@ -1,5 +1,4 @@
-# CS5551-LabAssignments
-<b>Advanced Software Engineering - Lab Assignments</b>
+# Advanced Software Engineering - Lab Assignments
 
 Class ID: 14
 

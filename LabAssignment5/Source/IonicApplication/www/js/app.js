@@ -114,28 +114,51 @@ imageApp.controller("AnalysisTwoController",function($scope,$http,$state){
             $scope.result.push("Sports : "+data.Sports);
          
           console.log($scope.result);
+           
        });
         
     }
            
     $scope.message = function(){
-    
-        console.log("sfhds");
-         $http({
-    url: "http://textbelt.com/text",
-    type: "POST",
-    data: { 
-       number: "3146141363",
-       message:"Message working"
-    },
-     success: function (response) {
-        console.log(response);
-    },
-    error: function() {
-        alert("it failed");
-    }
-});
-console.log("true");
-}
-                                          
+        
+         
+        
+         google.charts.load('current', {'packages':['corechart']});
+        
+          var textgiven = document.getElementById('textapi').value;
+       $http.get("https://api.uclassify.com/v1/uclassify/topics/Classify?readkey=WVWoyqjGtvFe&text="+textgiven).success(function(data){
+           console.log(data);
+      
+           
+           
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+console.log("3224");
+        var data1 = google.visualization.arrayToDataTable([
+          ['Classification', 'Probability'],
+          ['Arts',     data.Arts],
+          ['Business', data.Business],
+          ['Computers',  data.Computers],
+          ['Games',data.Games],
+          ['Health',    data.Health],
+            ['Home',   data.Home],
+            ['Recreation',    data.Recreation],
+            ['Science',    data.Science],
+            ['Society',    data.Society],
+            ['Sports',    data.Sports]
+        ]);
+
+        var options = {
+          title: 'Classification of text',
+            is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data1, options);
+      
+       }
+       
+})
+    }                                                                                                                          
 });

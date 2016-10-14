@@ -1,8 +1,20 @@
 # Advanced Software Engineering - Lab Assignments
 
-Class ID: 14
+The repository consists of all the Lab Assigments done by
 
-This is created for the Course work of CS 5551.
+Contributor : Sindhu Reddy Golconda (Class ID: 14)
+
+as part of the
+
+Course : Advanced Software Engineering (CS5551)
+
+Semester : Fall 2016
+
+Instructor : Dr.Yugyung Lee
+
+Teaching Assistants: Akhilesh Gattu, Marmik Patel, Arunit Gupta
+
+
 
 Links for WiKi pages:
 

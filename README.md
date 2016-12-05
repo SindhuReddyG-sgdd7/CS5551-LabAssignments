@@ -32,5 +32,11 @@ Lab Assignment 6# <a href="https://github.com/SindhuReddyG-sgdd7/CS5551-LabAssig
 
 Lab Assignment 7# <a href="https://github.com/SindhuReddyG-sgdd7/CS5551-LabAssignments/wiki/Tutorial-7"> WiKi Lab 7</a>
 
+Lab Assignment 8# <a href="https://github.com/SindhuReddyG-sgdd7/CS5551-LabAssignments/wiki/Tutorial-8"> WiKi Lab 8</a>
+
+Lab Assignment 9# <a href="https://github.com/SindhuReddyG-sgdd7/CS5551-LabAssignments/wiki/Tutorial-9"> WiKi Lab 9</a>
+
+Lab Assignment 10# <a href="https://github.com/SindhuReddyG-sgdd7/CS5551-LabAssignments/wiki/Tutorial-10"> WiKi Lab 10</a>
+
 
 For more details contact : sgdd7@mail.umkc.edu
